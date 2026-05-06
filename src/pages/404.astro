@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import Basic from "../layouts/Basic.astro";
+import SadDessie from "../images/dessieowo-sad.png";
+---
+
+<Basic title="Home">
+    <Image src={SadDessie} alt="Sad Dessie" width=300 height=300 style="display:block;margin:auto;" />
+	<h1 class="mainHeader">404 Error</h1>
+	<h3 class="mainSubheader">The page <span id="pathnameWarn">specified</span> does not exist.</h3>
+    <p style="text-align:center">
+        Double check that you spelled everything correctly, or go to the <a href="/">homepage</a>.
+        <br>
+        If you think this is a mistake, please <a href="/about#contact">contact us</a>.
+    </p>
+    <script>
+        const pathSlot = document.getElementById("pathnameWarn");
+        if (pathSlot) {
+            pathSlot.innerText = location.pathname;
+        } 
+    </script>
+</Basic>
