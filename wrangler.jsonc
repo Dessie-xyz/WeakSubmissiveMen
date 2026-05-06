@@ -1,7 +1,7 @@
 {
 	"compatibility_date": "2026-04-08",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "dessieowo3",
+	"name": "dessieowo",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
@@ -9,5 +9,11 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding":"SESSION",
+			"id":"02b9c4508fa847479b4b91b1abea73c7"
+		}
+	]
 }
