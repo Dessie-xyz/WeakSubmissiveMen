@@ -1,11 +1,11 @@
 ---
-//import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 import Basic from "../layouts/Basic.astro";
-//import SadDessie from "../images/dessieowo-sad.png";
+import SadDessie from "../images/dessieowo-sad.png";
 ---
 
 <Basic title="Home" description="Invalid page.">
-    <!-- FIX ASP <Image src={SadDessie} alt="Sad Dessie" width=300 height=300 style="display:block;margin:auto;" />-->
+    <Image src={SadDessie} alt="Sad Dessie" style="display:block;margin:auto;width:250px;height:250px;" />
 	<h1 class="mainHeader">404 Error</h1>
 	<h2 class="mainSubheader">The page <span id="pathnameWarn">specified</span> does not exist.</h2>
     <p style="text-align:center">
