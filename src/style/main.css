@@ -5,7 +5,7 @@
     font-style: normal;
     font-display: swap;
     src:
-        url(/fonts/MonaspaceArgonNF-Light.woff) format(woff2),
+        url(/fonts/MonaspaceArgonNF-Light.woff2) format(woff2),
         url(/fonts/MonaspaceArgonNF-Light.woff) format(woff);
 }
 @font-face {
@@ -14,7 +14,7 @@
     font-style: normal;
     font-display: swap;
     src:
-        url(/fonts/MonaspaceArgonNF-Bold.woff) format(woff2),
+        url(/fonts/MonaspaceArgonNF-Bold.woff2) format(woff2),
         url(/fonts/MonaspaceArgonNF-Bold.woff) format(woff);
 }
 @font-face {
@@ -23,7 +23,7 @@
     font-style: italic;
     font-display: swap;
     src:
-        url(/fonts/MonaspaceArgonNF-LightItalic.woff) format(woff2),
+        url(/fonts/MonaspaceArgonNF-LightItalic.woff2) format(woff2),
         url(/fonts/MonaspaceArgonNF-LightItalic.woff) format(woff);
 }
 @font-face {
@@ -32,14 +32,14 @@
     font-style: italic;
     font-display: swap;
     src:
-        url(/fonts/MonaspaceArgonNF-BoldItalic.woff) format(woff2),
+        url(/fonts/MonaspaceArgonNF-BoldItalic.woff2) format(woff2),
         url(/fonts/MonaspaceArgonNF-BoldItalic.woff) format(woff);
 }
 @font-face {
     font-family: xenon;
     font-display: swap;
     src: 
-        url(/fonts/MonaspaceXenonNF-ExtraBold.woff) format(woff2),
+        url(/fonts/MonaspaceXenonNF-ExtraBold.woff2) format(woff2),
         url(/fonts/MonaspaceXenonNF-ExtraBold.woff) format(woff);
 }
 
