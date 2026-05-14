@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig,passthroughImageService } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -8,9 +8,7 @@ export default defineConfig({
   site: 'https://dessieowo.com',
   output: 'server',
   adapter: cloudflare(),
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/noop'  // ← ADD THIS too (disables Sharp)
-    }
+  image:  {
+    service: passthroughImageService()
   }
 });
