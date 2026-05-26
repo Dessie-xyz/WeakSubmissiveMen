@@ -17,7 +17,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Basic title={post.data.title} {...(post.data.description ? { description: post.data.description } : {})}>
-  <a href="/blog">Return to Blog</a>
+  <a href="/blog">↩ Return to all blog posts</a>
 	<article>
 		<h1 class="mainHeader">{post.data.title}</h1>
 		{post.data.description && <h2 class="mainSubheader">{post.data.description}</h2>}
