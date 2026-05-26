@@ -6,7 +6,7 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Basic title="Blog">
+<Basic title="Blog" description="Dessie's various updates and writings.">
     <h1 class="mainHeader">Blog</h1>
     <p>Nothing here yet, but stay tuned!</p>
       {posts.map((post) => (
