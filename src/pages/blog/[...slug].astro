@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import Basic from "../../layouts/Basic.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+type Props = { post: CollectionEntry<'blog'> };
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Basic title={post.data.title} {...(post.data.description ? { description: post.data.description } : {})}>
+	<article>
+		<h1 class="mainHeader">{post.data.title}</h1>
+		{post.data.description && <h2 class="mainSubheader">{post.data.description}</h2>}
+    <p style="text-align:center">Posted on {post.data.pubDate.toLocaleDateString()}</p>
+    <hr>
+		<Content />
+	</article>
+</Basic>

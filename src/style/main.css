@@ -16,6 +16,18 @@
         url(/fonts/FiraCode-VariableFont_wght.ttf) format(ttf);
 }
 
+/*Global Colors*/
+:root {
+    --main-bg-color: #121314;
+    --sidebar-bg-color: #1a1b1c;
+    --secondary-bg-color: #D088D7;
+    --separator-color: #2a2b2c;
+    --main-text-color: aliceblue;
+    --secondary-text-color: #050505;
+    --link-text-color: #99C1F1;
+    --link-visited-color: #E3B9E9;
+}
+
 /*Text elements styling*/
 .mainHeader {
     width: 100%;
@@ -34,17 +46,22 @@ h1 {
     font-family: merriweather, 'Lucida Sans', monospace;
 }
 nav a {
-    color:aliceblue;
+    color:var(--secondary-text-color);
     text-decoration:none;
     width:100%;
     display:block;
     padding:10px 5px 10px;
-    background-color:#43404d;
+    background-color:var(--secondary-bg-color);
     margin-bottom:3px;
 }
+
+nav a:visited {
+    color: var(--secondary-text-color);
+}
+
 nav a:hover {
-    color: white;
-    background-color: black;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
 }
 article p, article ul, article ol {
     margin-left:50px;
@@ -54,10 +71,10 @@ sup {
     font-size: 8px;
 }
 a {
-    color: #ADD8E6;
+    color: var(--link-text-color);
 }
 a:visited {
-    color: #CBC3E3;
+    color: var(--link-visited-color);
 }
 
 /*Layout*/
@@ -68,8 +85,8 @@ html,body {
 }
 body {
     position:relative;
-    background-color: #121314;
-    color: aliceblue;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     margin: 0;
     min-height: 100vh;
     display:flex;
@@ -81,8 +98,8 @@ body {
     flex:1;
 }
 aside {
-    background-color: #1a1b1c;
-    border-right: 3px solid #2a2b2c;
+    background-color: var(--sidebar-bg-color);
+    border-right: 3px solid var(--separator-color);
     width:15%;
     overflow-wrap:break-word;
     overflow:hidden;
@@ -98,7 +115,7 @@ footer {
     width: 100%;
     bottom:0;
     margin-bottom:0;
-    background-color: #1a1b1c;
-    border-top: 3px solid #2a2b2c;
+    background-color: var(--sidebar-bg-color);
+    border-top: 3px solid var(--separator-color);
     padding: 5px 20px 10px;
 }

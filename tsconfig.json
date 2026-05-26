@@ -11,6 +11,8 @@
 "compilerOptions": {
     "types": [
         "./worker-configuration.d.ts"
-    ]
+    ],
+    "strictNullChecks": true,
+    "allowJs": true
 }
 }
