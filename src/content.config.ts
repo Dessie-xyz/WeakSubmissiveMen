@@ -11,6 +11,15 @@ const blog = defineCollection({
   }),
 });
 
+const redirects = defineCollection({
+  loader: file('./src/data/redirects.json'),
+  schema: z.object({
+    slug: z.string(),
+    rUrl: z.url()
+  })
+});
+
 export const collections = {
   blog,
+  redirects
 };

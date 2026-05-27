@@ -1,0 +1,15 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const redirects = await getCollection('redirects');
+  return redirects.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { url: entry.data.rUrl },
+  }));
+}
+
+const { url } = Astro.props;
+return Astro.redirect(url, 301);
+---
