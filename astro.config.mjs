@@ -5,9 +5,11 @@ import cloudflare from '@astrojs/cloudflare';
 
 import mdx from '@astrojs/mdx';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dessieowo.com',
+  site: 'https://www.dessieowo.com',
   output: 'server',
   adapter: cloudflare(),
 
@@ -15,5 +17,12 @@ export default defineConfig({
     service: passthroughImageService()
   },
 
-  integrations: [mdx()]
+  integrations: [mdx(), sitemap({
+      filter: (page) => {
+        const url = new URL(page);
+
+        // Exclude anything under /r/
+        return !url.pathname.startsWith('/r/');
+      },
+    })]
 });
