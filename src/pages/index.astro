@@ -1,9 +1,37 @@
 ---
 import Basic from "../layouts/Basic.astro";
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).slice(0,1);
 ---
+<style>
+.post-card {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+  border-radius: 8px;
+  text-decoration: none;
+}
+.post-card:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--secondary-bg-color);
+}
+</style>
 
 <Basic title="Home">
 	<h1 class="mainHeader">DessieOwO</h1>
 	<h2 class="mainSubheader">Home of <em>The Barp</em></h2>
 	<p>This website is a preview of planned changes to <a href="https://dessieowo.com">DessieOwO.com</a>. Anything you see here may change in the future. Please use the <a href="/about#contact">contact info on our about page</a> to give your feedback.</p>
+	<hr>
+	<h2>Latest Blog Post</h2>
+	{posts.map((post) => (
+    	<a href={`/blog/${post.id}`} class="post-card">
+    		<h3 >{post.data.title}</h3><p>({post.data.pubDate.toLocaleDateString()})</p>
+    		{post.data.description && <p>&gt;&gt; {post.data.description}</p>}
+    	</a>
+  	))}
 </Basic>
