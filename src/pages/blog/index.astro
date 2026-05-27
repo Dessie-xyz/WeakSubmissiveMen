@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
         border-radius: 8px;
         text-decoration: none;
     ">
-      <h3 >{post.data.title}</h3><p>({post.data.pubDate.toLocaleDateString()})</p>
+      <h2 >{post.data.title}</h2><p>({post.data.pubDate.toLocaleDateString()})</p>
       {post.data.description && <p>&gt;&gt; {post.data.description}</p>}
     </a>
   ))}
