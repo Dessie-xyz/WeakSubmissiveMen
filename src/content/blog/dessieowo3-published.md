@@ -1,6 +1,6 @@
 ---
 title: 'DessieOwO3 Has Been Published'
-description: 'The dessieowo3 redesign has been published.'
+description: 'The DessieOwO3 redesign has been published.'
 pubDate: 'May 26 2026'
 ---
 Welcome to DessieOwO3, the third design iteration of [dessieowo.com](https://www.dessieowo.com). 
