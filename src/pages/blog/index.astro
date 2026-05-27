@@ -5,19 +5,26 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
+<style>
+.post-card {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+  border-radius: 8px;
+  text-decoration: none;
+}
+.post-card:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--secondary-bg-color);
+}
 
+</style>
 <Basic title="Blog" description="Dessie's various updates and writings.">
     <h1 class="mainHeader">Blog</h1>
       {posts.map((post) => (
-    <a href={`/blog/${post.id}`} style="
-        display: block;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        background-color: var(--secondary-bg-color);
-        color: var(--secondary-text-color);
-        border-radius: 8px;
-        text-decoration: none;
-    ">
+    <a href={`/blog/${post.id}`} class="post-card">
       <h2 >{post.data.title}</h2><p>({post.data.pubDate.toLocaleDateString()})</p>
       {post.data.description && <p>&gt;&gt; {post.data.description}</p>}
     </a>
