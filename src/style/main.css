@@ -68,7 +68,7 @@ article p, article ul, article ol {
     margin-right:50px;
 }
 sup {
-    font-size: 8px;
+    font-size: 10px;
 }
 a {
     color: var(--link-text-color);

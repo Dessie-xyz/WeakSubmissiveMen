@@ -1,9 +1,129 @@
 ---
 import NavLogo from "../../public/favicon.svg";
 ---
+<style>
+    button.mobile-navbutton {
+        display: none;
+    }
+    @media (max-width: 700px) {
+        aside {
+            display: none;
+        }
+        button.mobile-navbutton {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            display: inline-flex;
+            line-height: 0;
+            width: 75px;
+            height: 75px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        button.mobile-navbutton #background {
+            fill: #1a1b1c;
+        }
+        button.mobile-navbutton:hover #background {
+            fill: #d088d7;
+        }
+        button.mobile-navbutton:hover #rect1, button.mobile-navbutton:hover #rect2, button.mobile-navbutton:hover #rect3 {
+            stroke: #1a1b1c;
+        }
+        button.mobile-navbutton #rect1, button.mobile-navbutton #rect2, button.mobile-navbutton #rect3 {
+            stroke: #d088d7;
+        }
+    }
+    dialog#mobile-navbar {
+        border: none;
+        padding: 20px;
+        background-color: var(--sidebar-bg-color);
+        color: var(--main-text-color);
+        width: 80%;
+        max-width: 300px;
+        border: 2px solid var(--secondary-bg-color);
+        margin-top: 100px;
+    }
+    dialog#mobile-navbar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    dialog#mobile-navbar button {
+        color: var(--secondary-text-color);
+        background-color: var(--secondary-bg-color);
+        text-decoration: none;
+        padding: 10px 5px 10px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    dialog#mobile-navbar button:hover {
+        color: var(--secondary-bg-color);
+        background-color: var(--secondary-text-color);
+    }
+</style>
+<button class="mobile-navbutton" aria-label="Open navigation menu" aria-controls="sidebar" popovertarget="mobile-navbar">
+    <svg
+   width="75px"
+   height="75px"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   aria-hidden="true">
+   <title>Open navigation menu</title>
+  <defs
+     id="defs1" />
+  <circle
+     style="fill-opacity:1;stroke:none;stroke-width:7;stroke-opacity:1"
+     id="background"
+     cx="25"
+     cy="25"
+     transform="rotate(-0.85648735)"
+     r="25" />
+  <g
+     id="menu">
+    <g
+       id="icon"
+       transform="matrix(1.0265123,0,0,1.0265123,-0.6628075,-5.4399848)">
+      <rect
+         style="fill:none;fill-opacity:1;stroke-width:4.99792;stroke-opacity:1"
+         id="rect1"
+         width="27.708502"
+         height="0.72728014"
+         x="11.145749"
+         y="16.319891"
+         rx="1.331023" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke-width:4.99792;stroke-opacity:1"
+         id="rect2"
+         width="27.708422"
+         height="0.72728014"
+         x="11.145789"
+         y="29.290154"
+         rx="1.331023" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke-width:4.99792;stroke-opacity:1"
+         id="rect3"
+         width="27.708422"
+         height="0.72728014"
+         x="11.145789"
+         y="42.260418"
+         rx="1.331023" />
+    </g>
+  </g>
+    </svg>
+
+</button>
 <aside>
 <div style="width:100%;display:flex;justify-content:center;flex-direction: column;align-items:center;">
-    <NavLogo style="width:100px;height:100px;" />
+    <NavLogo style="width:100px;height:100px;"/>
     <h1>DessieOwO</h1>
 </div>
 <nav>
@@ -12,3 +132,11 @@ import NavLogo from "../../public/favicon.svg";
     <a href="/blog">Blog</a>
 </nav>
 </aside>
+<dialog id="mobile-navbar" popover>
+    <button popovertarget="mobile-navbar" popovertargetaction="hide">Close dialogue</button>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+    </nav>
+</dialog>
