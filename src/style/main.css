@@ -8,6 +8,7 @@
         url(/fonts/Merriweather-VariableFont_opsz,wdth,wght.woff2) format(woff2),
         url(/fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf) format(ttf);
 }
+
 @font-face {
     font-family: firaCode;
     font-display: swap;
@@ -33,88 +34,103 @@
     width: 100%;
     text-align: center;
     font-family: merriweather, 'Lucida Sans', monospace;
-    font-size:72px;
+    font-size: 72px;
 }
+
 .mainSubheader {
     width: 100%;
     text-align: center;
     font-family: merriweather, 'Lucida Sans', monospace;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 42px;
 }
+
 h1 {
     font-family: merriweather, 'Lucida Sans', monospace;
 }
+
 nav a {
-    color:var(--secondary-text-color);
-    text-decoration:none;
-    width:100%;
-    display:block;
-    padding:10px 5px 10px;
-    background-color:var(--secondary-bg-color);
-    margin-bottom:3px;
-}
-
-nav a:visited {
     color: var(--secondary-text-color);
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 10px 5px 10px;
+    background-color: var(--secondary-bg-color);
+    margin-bottom: 3px;
+
+    &:visited {
+        color: var(--secondary-text-color);
+    }
+
+    &:hover {
+        color: var(--secondary-bg-color);
+        background-color: var(--secondary-text-color);
+    }
 }
 
-nav a:hover {
-    color: var(--secondary-bg-color);
-    background-color: var(--secondary-text-color);
+article p,
+article ul,
+article ol {
+    margin-left: 50px;
+    margin-right: 50px;
 }
-article p, article ul, article ol {
-    margin-left:50px;
-    margin-right:50px;
-}
+
 sup {
     font-size: 10px;
 }
+
 a {
     color: var(--link-text-color);
-}
-a:visited {
-    color: var(--link-visited-color);
+
+    &:visited {
+        color: var(--link-visited-color);
+    }
 }
 
 /*Layout*/
-html,body {
-    height:100%;
-    margin:0;
+html,
+body {
+    height: 100%;
+    margin: 0;
     font-family: firaCode, 'Lucida Sans', monospace;
 }
+
 body {
-    position:relative;
+    position: relative;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     margin: 0;
     min-height: 100vh;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
+
 .notFooter {
-    display:flex;
-    flex:row nowrap;
-    flex:1;
+    display: flex;
+    flex: row nowrap;
+    flex: 1;
 }
+
 aside {
     background-color: var(--sidebar-bg-color);
     border-right: 3px solid var(--separator-color);
-    width:15%;
-    overflow-wrap:break-word;
-    overflow:hidden;
+    width: 15%;
+    overflow-wrap: break-word;
+    overflow: hidden;
 }
+
 main {
     padding: 10px 20px;
     width: 100%;
     overflow: visible;
 }
+
 footer {
-    display:block;
+    display: block;
     position: relative;
     width: 100%;
-    bottom:0;
-    margin-bottom:0;
+    bottom: 0;
+    margin-bottom: 0;
     background-color: var(--sidebar-bg-color);
     border-top: 3px solid var(--separator-color);
     padding: 5px 20px 10px;
