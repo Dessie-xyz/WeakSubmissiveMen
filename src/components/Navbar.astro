@@ -1,5 +1,6 @@
 ---
-import NavLogo from "../../public/favicon.svg";
+import { Image } from "astro:assets";
+import MateoLogo from "../images/SquareLogo.png";
 ---
 
 <style>
@@ -132,8 +133,8 @@ import NavLogo from "../../public/favicon.svg";
 </button>
 <header>
     <div style="width:100%;display:flex;justify-content:center;flex-direction: column;align-items:center;">
-        <NavLogo style="width:100px;height:100px;" />
-        <h1>DessieOwO</h1>
+        <Image src={MateoLogo} alt="Mateo Logo" style="width:100px;height:100px;" />
+        <h1>Weak Submissive Men</h1>
     </div>
     <nav>
         <a href="/">Home</a>

@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import Basic from "../layouts/Basic.astro";
-import SadDessie from "../images/dessieowo-sad.png";
+import SadMateo from "../images/404.png";
 ---
 
 <Basic title="Home" description="Invalid page.">
-    <Image src={SadDessie} alt="Sad Dessie" style="display:block;margin:auto;width:250px;height:250px;" />
-	<h1 class="mainHeader">404 Error</h1>
+    <h1 class="mainHeader">Error:</h1>
+    <Image src={SadMateo} alt="404 error" style="display:block;margin:auto;width:250px;height:250px;" />
 	<h2 class="mainSubheader">The page <span id="pathnameWarn">specified</span> does not exist.</h2>
     <p style="text-align:center">
         Double check that you spelled everything correctly, or go to the <a href="/">homepage</a>.

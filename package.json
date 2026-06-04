@@ -1,5 +1,5 @@
 {
-	"name": "dessieowo3",
+	"name": "weaksubmissivemen",
 	"type": "module",
 	"version": "0.0.1",
 	"engines": {
@@ -15,10 +15,12 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.9.9",
 		"@astrojs/cloudflare": "^13.5.1",
 		"@astrojs/mdx": "^5.0.6",
 		"@astrojs/sitemap": "^3.7.3",
-		"astro": "^6.1.4"
+		"astro": "^6.1.4",
+		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
 		"wrangler": "^4.90.1"

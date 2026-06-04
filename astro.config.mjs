@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.dessieowo.com',
+  site: 'https://www.weaksubmissive.men',
   output: 'server',
   adapter: cloudflare(),
 
